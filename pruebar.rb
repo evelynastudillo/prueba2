@@ -3,14 +3,12 @@
     data = file.readlines.map(&:chomp)
     file.close
 
-
-
     def promedio
     file = File.open('alumnos.csv', 'r')
     data = file.readlines.map(&:chomp)
     suma = 0
     data.each do |elem|
-    suma += elem.split(', ')[1].to_i
+    p suma += elem.split(', ')[1].to_i
     end
      puts suma
     end
@@ -31,7 +29,6 @@
 
   end
 
-
   puts 'Opciones'
   opcion = 0
   while opcion != 4
@@ -45,11 +42,8 @@
     puts case opcion
   when '1'
     promedio(data)
-
-
   when '2'
     inasistencias(data)
-
   when '3'
     aprobados(data)
   else
