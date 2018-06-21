@@ -39,7 +39,7 @@ while opcion != 4
   puts '2   Inasistencias Totales'
   puts '3   Alumnos Aprobados'
   puts '4   Salir'
-
+  puts 'Ingrese su opcion'
  opcion = gets.chomp
 
   puts case opcion
@@ -55,5 +55,5 @@ when '3'
 else
   exit
 
-end 
+end
 end
