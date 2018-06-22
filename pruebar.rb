@@ -9,7 +9,7 @@
     data = file.readlines.map(&:chomp)
     suma = 0
     data.each do |notas|
-    p suma += notas.split(', ')[1].map(&:to_i)
+    p suma += notas.split(', ')[1..5].map(&:to_i)
     end
     p suma / data.size
 
@@ -24,16 +24,26 @@ end
     file close
     data. each do |inasis|
       lineas = inasis.split(', ').map(&:chomp)
-      p lineas if lineas == 'A'
+     if lineas == 'A'
+       puts "las inasistencias son #{inasis}"
     end
   end
-  inasistencias()
+  inasistencias('A')
 
   def aprobados
       file = File.open('alumnos.csv', 'r')
     data = file.readlines.map(&:chomp)
+    suma = 0
+      data.each do |aprob|
+        suma += notas.split(', ').map(&:to_i)
+      end
+        prome = suma / data.size
+      p  if prome <5
+
+      end
 
   end
+
 
   puts 'Opciones'
   opcion = 0
