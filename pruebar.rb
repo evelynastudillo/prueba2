@@ -1,21 +1,20 @@
 
+
     file = File.open('alumnos.csv', 'r')
-     p data = file.readlines.map(&:chomp)
+    p data = file.readlines.map(&:chomp)
     file.close
 
-    #def promedio
-    #file = File.open('alumnos2.csv', 'w')
-    #data = file.readlines.map(&:chomp)
-    #suma = 0
-    #data.each do |elem|
-    #prom = elem.split(', ')[1..5].each.map(&:to_i)
-    #sum += prom / data.size
+  def promedio
+    file = File.open('alumnosf.csv', 'w')
+    data = file.readlines.map(&:chomp)
+    suma = 0
+    data.each do |notas|
+    p suma += notas.split(', ')[1].map(&:to_i)
+    end
+    p suma / data.size
 
-    #data.puts "#{alumno[0]}: #{prom}"
-  #end
-#end
-promedio
-# variable = metodo para usar despues
+  promedio
+end
 
 
 
