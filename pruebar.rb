@@ -8,12 +8,21 @@
     data = file.readlines.map(&:chomp)
     suma = 0
     data.each do |elem|
-    puts suma += elem.split(', ')[1..5].each.map(&:to_i)
-    end
-    promedio
+    prom = elem.split(', ')[1..5].each.map(&:to_i)
+    sum += prom / data.size
+    #File.puts "comentario #" 
   end
 
+end
 
+
+
+
+
+
+  file = File.open('hola.txt', 'w')
+  file.puts 'Holaaaaaaa!'
+  file.close
 
   def inasistencias(letter)
     file = File.open('alumnos.csv', 'r')

@@ -1,10 +1,25 @@
 
-p data = ['David', 9, 2, 5, 1, 1], ['Gonzalo', 10, 2, 'A', 8, 1], ['Mai', 10, 10, 9, 9, 'A'], ['JP', 10, 10, 10, 10, 10]
-
-
-def promedio
-  data.map 
+    def promedio
+      suma = 0
+    file = File.open('alumnos.csv', 'r')
+    lines.each do |line|
+      data = line.split(', ')[1..5].each.map(&:to_i)
+      p suma += data
 end
- p suma
 end
 promedio
+
+#File.open('sample.txt', 'r') { |file| lines = file.readlines }
+#print lines.inject(0){ |sum, line| sum + line.split(' ').last.to_i } / lines.count.to_f
+
+      #lines = []
+  #avg = 0
+  #File.open('sample.txt', 'r') { |file| lines = file.readlines }
+  #lines.each do |line|
+   #price = line.split(' ').last.to_i
+   #avg += price
+  #end
+  #puts avg / lines.count.to_f
+
+      #File.open('sample.txt', 'r') { |file| lines = file.readlines }
+      #print lines.inject(0){ |sum, line| sum + line.split(' ').last.to_i } / lines.count.to_f
