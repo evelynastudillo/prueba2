@@ -1,37 +1,34 @@
 
     file = File.open('alumnos.csv', 'r')
-     data = file.readlines.map(&:chomp)
+     p data = file.readlines.map(&:chomp)
     file.close
 
-    def promedio
-    file = File.open('alumnos.csv', 'r')
-    p data = file.readlines.map(&:chomp)
-    suma = 0
-    data.each do |elem|
-    prom = elem.split(', ')[1..5].each.map(&:to_i)
-    sum += prom / data.size
-    #File.puts "comentario #"
-  end
+    #def promedio
+    #file = File.open('alumnos2.csv', 'w')
+    #data = file.readlines.map(&:chomp)
+    #suma = 0
+    #data.each do |elem|
+    #prom = elem.split(', ')[1..5].each.map(&:to_i)
+    #sum += prom / data.size
 
-end
-
+    #data.puts "#{alumno[0]}: #{prom}"
+  #end
+#end
+promedio
 # variable = metodo para usar despues
 
 
 
-
-  file = File.open('hola.txt', 'w')
-  file.puts 'Holaaaaaaa!'
-  file.close
-
   def inasistencias(letter)
     file = File.open('alumnos.csv', 'r')
-    data = file.readlines.map(&:chomp)
-    data.each do |let|
-    let.include?(letter)
+    data = file.readlines.
+    file close
+    data. each do |inasis|
+      lineas = inasis.split(', ').map(&:chomp)
+      p lineas if lineas == 'A'
+    end
   end
-  p inasistencias('A')
-  end
+  inasistencias()
 
   def aprobados
       file = File.open('alumnos.csv', 'r')
@@ -53,7 +50,7 @@ end
   when '1'
     promedio(data, promedio)
   when '2'
-    inasistencias(data)
+    inasistencias(data, letter)
   when '3'
     aprobados(data)
   else

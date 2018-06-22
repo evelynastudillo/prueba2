@@ -1,11 +1,24 @@
-    def promedio
+
     file = File.open('alumnos.csv', 'r')
-    data = file.readlines.map(&:chomp)
+    data = file.readlines.map(&:chomp).map { |linea| linea.split(', ')}
     file.close
 
-    data.each do |nota|
-    alum = nota.chomp.split(', ')
-
-end
-p alum
-end
+    def promedios(hashito)
+      lines = hashito.map(&:chomp)
+      nota = File.open("promedios.csv", 'w')
+      lines.each do |value|
+        promedio = value.split(',')
+        sum = 0
+        cont = 0
+               promedio.each do
+                 if promedio[cont].to_i.is_a? Integer
+                 sum += promedio[cont].to_i
+                 end
+                 cont += 1
+               end
+           valor = sum.to_f/(promedio.length - 1)
+        nota.puts "#{promedio[0]}: #{valor}"
+      end
+      nota.close
+      return "\nArchivo generado correctamente\n "
+    end
