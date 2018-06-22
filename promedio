@@ -1,25 +1,11 @@
-
     def promedio
-      suma = 0
     file = File.open('alumnos.csv', 'r')
-    lines.each do |line|
-      data = line.split(', ')[1..5].each.map(&:to_i)
-      p suma += data
+    data = file.readlines.map(&:chomp)
+    file.close
+
+    data.each do |nota|
+    alum = nota.chomp.split(', ')
+
 end
+p alum
 end
-promedio
-
-#File.open('sample.txt', 'r') { |file| lines = file.readlines }
-#print lines.inject(0){ |sum, line| sum + line.split(' ').last.to_i } / lines.count.to_f
-
-      #lines = []
-  #avg = 0
-  #File.open('sample.txt', 'r') { |file| lines = file.readlines }
-  #lines.each do |line|
-   #price = line.split(' ').last.to_i
-   #avg += price
-  #end
-  #puts avg / lines.count.to_f
-
-      #File.open('sample.txt', 'r') { |file| lines = file.readlines }
-      #print lines.inject(0){ |sum, line| sum + line.split(' ').last.to_i } / lines.count.to_f

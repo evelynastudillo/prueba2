@@ -5,17 +5,17 @@
 
     def promedio
     file = File.open('alumnos.csv', 'r')
-    data = file.readlines.map(&:chomp)
+    p data = file.readlines.map(&:chomp)
     suma = 0
     data.each do |elem|
     prom = elem.split(', ')[1..5].each.map(&:to_i)
     sum += prom / data.size
-    #File.puts "comentario #" 
+    #File.puts "comentario #"
   end
 
 end
 
-
+# variable = metodo para usar despues
 
 
 
