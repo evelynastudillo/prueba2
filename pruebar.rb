@@ -61,9 +61,9 @@ end
   when '2'
     inasistencias(data, letter)
   when '3'
-    aprobados(data)
+    aprobados(data, aprobados)
   else
     exit
-
+#al menos el menu si sirve u.u
     end
    end
